@@ -18,21 +18,23 @@
   <main id="main">
     <h1>Contact and pre-order requests</h1>
     <p>Tell us what you have in mind for pickup or ask a question. This HTML demonstration form shows the required fields and browser validation; it is not connected to a submission service, so sending it does not place an order.</p>
-    <form action="#" method="get">
+    <form id="inquiry-form" action="#" method="get">
       <fieldset><legend>Your information</legend>
-        <p><label for="name">Name (required)</label><br><input id="name" name="name" type="text" autocomplete="name" required></p>
-        <p><label for="email">Email (required)</label><br><input id="email" name="email" type="email" autocomplete="email" required></p>
+        <p><label for="name">Name (required)</label><br><input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required><small id="name-error" class="field-error" aria-live="polite"></small></p>
+        <p><label for="email">Email (required)</label><br><input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required><small id="email-error" class="field-error" aria-live="polite"></small></p>
       </fieldset>
       <fieldset><legend>Your request</legend>
-        <p><label for="request-type">Request type (required)</label><br><select id="request-type" name="request-type" required><option value="">Choose one</option><option value="pre-order">Pre-order inquiry</option><option value="question">General question</option></select></p>
-        <p><label for="pickup-date">Preferred pickup date (required)</label><br><input id="pickup-date" name="pickup-date" type="date" required><br><small>For a general question, choose a date when you would like a reply.</small></p>
-        <p><label for="details">Item details or question (required)</label><br><textarea id="details" name="details" rows="5" cols="45" required></textarea></p>
+        <p><label for="request-type">Request type (required)</label><br><select id="request-type" name="request-type" aria-describedby="request-type-error" required><option value="">Choose one</option><option value="pre-order">Pre-order inquiry</option><option value="question">General question</option></select><small id="request-type-error" class="field-error" aria-live="polite"></small></p>
+        <p><label for="pickup-date">Preferred pickup date (required)</label><br><input id="pickup-date" name="pickup-date" type="date" aria-describedby="pickup-help pickup-date-error" required><small id="pickup-help">For a general question, choose a date when you would like a reply.</small><small id="pickup-date-error" class="field-error" aria-live="polite"></small></p>
+        <p><label for="details">Item details or question (required)</label><br><textarea id="details" name="details" rows="5" cols="45" aria-describedby="details-error" required></textarea><small id="details-error" class="field-error" aria-live="polite"></small></p>
         <p><label for="allergies">Allergy notes (if applicable)</label><br><textarea id="allergies" name="allergies" rows="3" cols="45"></textarea></p>
       </fieldset>
       <button type="submit">Review request in browser</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
     </form>
     <section aria-labelledby="location"><h2 id="location">Location and hours</h2><address>Sample address: 123 North Street, Your Town</address><p>Sample hours: Monday–Saturday, 7 a.m.–5 p.m.; Sunday, 8 a.m.–2 p.m. Replace these placeholders with confirmed bakery details before using the site publicly.</p></section>
   </main>
   <footer><p>North Star Bakery · <a href="index.html">Home</a></p></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
