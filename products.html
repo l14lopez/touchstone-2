@@ -25,11 +25,14 @@
         <img src="media/bakery-signature-loaf_c.png" alt="North Star Bakery’s rustic Signature Loaf" width="560">
         <figcaption>Signature Loaf: a hearty centerpiece for a shared meal. Ask about availability and ingredients.</figcaption>
       </figure>
+      <button type="button" class="favorite-button" data-product="signature-loaf" aria-pressed="false">Save Signature Loaf</button>
     </section>
-    <section aria-labelledby="pastries"><h2 id="pastries">Pastries</h2><p>Morning pastries and seasonal treats for a small break or a breakfast gathering. Sample range: $3–$7 each.</p></section>
-    <section aria-labelledby="cakes"><h2 id="cakes">Cakes</h2><p>Celebration cakes for birthdays and neighborhood milestones. Sample range: $35–$90, depending on size and details.</p></section>
+    <section aria-labelledby="pastries"><h2 id="pastries">Pastries</h2><p>Morning pastries and seasonal treats for a small break or a breakfast gathering. Sample range: $3–$7 each.</p><button type="button" class="favorite-button" data-product="morning-pastries" aria-pressed="false">Save Morning Pastries</button></section>
+    <section aria-labelledby="cakes"><h2 id="cakes">Cakes</h2><p>Celebration cakes for birthdays and neighborhood milestones. Sample range: $35–$90, depending on size and details.</p><button type="button" class="favorite-button" data-product="celebration-cakes" aria-pressed="false">Save Celebration Cakes</button></section>
+    <section aria-labelledby="saved-heading" id="saved-items"><h2 id="saved-heading">Items to ask us about</h2><p>Save a few ideas for your next visit. Your choices stay in this browser; they are not a pre-order.</p><p id="favorites-status" role="status" aria-live="polite">No items saved yet.</p><ul id="favorites-list"></ul></section>
     <p>Planning an event? <a href="contact.html">Send a pre-order request</a> with the items, quantities, and pickup date. No online checkout is available.</p>
   </main>
   <footer><p>North Star Bakery · <a href="contact.html">Contact us</a></p></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

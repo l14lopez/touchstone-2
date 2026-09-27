@@ -58,6 +58,10 @@ input, select, textarea { width: 100%; max-width: 100%; padding: .65rem; border:
 textarea { resize: vertical; }
 button { background: var(--brown); color: var(--cream); border: 0; border-radius: .3rem; padding: .75rem 1.2rem; cursor: pointer; }
 button:hover { background: var(--charcoal); }
+.favorite-button[aria-pressed="true"] { background: var(--charcoal); }
+.field-error { color: var(--brown); font-weight: bold; }
+[aria-invalid="true"] { border-width: 3px; }
+#favorites-list { padding-left: 1.5rem; }
 small { display: block; }
 footer { padding: 1.2rem max(1rem, calc((100vw - 70rem)/2)); }
 footer p { margin: 0; }
